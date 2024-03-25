@@ -1,0 +1,17 @@
+<%- include('./partials/head')%>
+<%- include('./partials/header')%>
+
+<main>
+    <h1><%= mensaje %></h1>
+    <ul>
+        <% for( let i = 0; i < lista.length; i++ ) { %>
+        <li>Banda: <%= lista[i].nombre %> </li>
+        <li>Integrantes: <%= lista[i].integrantes %></li>
+        <li>Genero: <a href="/genero/<%= lista[i].genero %>"><%= lista[i].genero %></a></li>
+        <li>Top Canciones: <%= lista[i].topCanciones %></li>
+        <li>Video: <a href="<%= video %>"><%= lista[i].video %></a></li>
+        <% } %>
+    </ul>
+</main>
+
+<%- include('./partials/footer') %>
